@@ -18,7 +18,7 @@ export function PageHero({
         className="object-cover"
       />
       <div className="absolute inset-0 bg-black/55" />
-      <div className="relative z-10 h-full max-w-[90vw] mx-auto px-5 lg:px-8 flex items-end pb-12 pt-32">
+      <div className="relative z-10 h-full w-[90vw] lg:max-w-[90vw] mx-auto flex items-end pb-12 pt-32">
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white">
           {title}
         </h1>

@@ -23,7 +23,7 @@ export default function Page() {
       <PageHero title="Kontakt" />
 
       <section className="py-20 lg:py-28 bg-paper">
-        <div className="max-w-[90vw] mx-auto px-5 lg:px-8">
+        <div className="w-[90vw] lg:max-w-[90vw] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             <FadeIn>
               <h2 className="text-3xl md:text-4xl font-bold mb-2">

@@ -38,7 +38,7 @@ export function Navbar() {
         solid ? "bg-ink/95 backdrop-blur" : "bg-transparent"
       }`}
     >
-      <div className="max-w-[90vw] mx-auto px-5 lg:px-8 flex items-center justify-between h-20">
+      <div className="w-[90vw] lg:max-w-[90vw] mx-auto flex items-center justify-between h-20">
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/logo.png"
@@ -168,7 +168,7 @@ export function Navbar() {
           open ? "max-h-[85vh] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <ul className="flex flex-col py-6 px-6 gap-1 text-white overflow-y-auto">
+        <ul className="flex flex-col py-6 w-[90vw] mx-auto gap-1 text-white overflow-y-auto">
           <li>
             <Link
               href="/"

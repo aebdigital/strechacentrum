@@ -21,7 +21,7 @@ export default async function Layout({
     <>
       <PageHero title={title} />
       <section className="py-20 lg:py-28 bg-paper">
-        <div className="max-w-[90vw] mx-auto px-5 lg:px-8">
+        <div className="w-[90vw] lg:max-w-[90vw] mx-auto">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
             {/* Sidebar */}
             <aside className="w-full lg:w-72 shrink-0">

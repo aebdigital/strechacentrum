@@ -6,7 +6,7 @@ import { RollLink } from "./RollButton";
 export function Footer() {
   return (
     <footer className="bg-ink text-white">
-      <div className="max-w-[90vw] mx-auto px-5 lg:px-8 py-16">
+      <div className="w-[90vw] lg:max-w-[90vw] mx-auto py-16">
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 pb-12">
           <div>
             <h2 className="text-3xl lg:text-4xl font-bold leading-tight max-w-xl">

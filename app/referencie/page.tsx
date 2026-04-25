@@ -28,7 +28,7 @@ export default function Page() {
       <PageHero title="Referencie" />
 
       <section className="py-20 lg:py-28 bg-paper">
-        <div className="max-w-[90vw] mx-auto px-5 lg:px-8">
+        <div className="w-[90vw] lg:max-w-[90vw] mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Naše realizované projekty

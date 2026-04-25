@@ -31,7 +31,7 @@ export default function Home() {
       <div className="relative z-10 bg-paper">
         {/* About */}
         <section id="about" className="py-20 lg:py-28 bg-paper">
-          <div className="max-w-[90vw] mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div className="w-[90vw] lg:max-w-[90vw] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <FadeIn>
               <span className="text-brand uppercase tracking-widest text-sm font-medium">
                 — Kto sme
@@ -111,7 +111,7 @@ export default function Home() {
 
         {/* Gallery */}
         <section id="gallery" className="py-20 lg:py-28 bg-stone">
-          <div className="max-w-[90vw] mx-auto px-5 lg:px-8">
+          <div className="w-[90vw] lg:max-w-[90vw] mx-auto">
             <FadeIn className="mb-12 text-center">
               <SectionTitle>Galéria</SectionTitle>
             </FadeIn>
@@ -160,7 +160,7 @@ export default function Home() {
 
         {/* Partners */}
         <section id="partners" className="py-20 lg:py-28 bg-paper">
-          <div className="max-w-[90vw] mx-auto px-5 lg:px-8">
+          <div className="w-[90vw] lg:max-w-[90vw] mx-auto">
             <FadeIn className="mb-12 text-center">
               <SectionTitle>Partneri</SectionTitle>
             </FadeIn>

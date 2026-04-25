@@ -14,7 +14,7 @@ export default function Page() {
     <>
       <PageHero title="Ochrana osobných údajov" />
       <section className="py-20 lg:py-28 bg-paper">
-        <div className="max-w-4xl mx-auto px-5 lg:px-8">
+        <div className="w-[90vw] lg:max-w-4xl mx-auto">
           <FadeIn>
             <article className="prose prose-brand max-w-none">
               <div className="bg-stone p-8 rounded-xl border-l-4 border-brand mb-12">

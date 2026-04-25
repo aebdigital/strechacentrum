@@ -46,7 +46,7 @@ export default function Page() {
       <PageHero title="Strechy na mieru" />
 
       <section className="py-20 lg:py-28 bg-paper overflow-hidden">
-        <div className="max-w-[90vw] mx-auto px-5 lg:px-8">
+        <div className="w-[90vw] lg:max-w-[90vw] mx-auto">
           <FadeIn className="mb-14">
             <SectionTitle>Proces realizácie</SectionTitle>
           </FadeIn>

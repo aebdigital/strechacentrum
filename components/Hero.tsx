@@ -55,7 +55,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="relative z-10 h-full max-w-[90vw] mx-auto px-5 lg:px-8 flex flex-col justify-end pb-16 pt-32">
+      <div className="relative z-10 h-full w-[90vw] lg:max-w-[90vw] mx-auto flex flex-col justify-end pb-16 pt-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
           <div className="text-white">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
@@ -67,35 +67,35 @@ export function Hero() {
               profesionálov. Možnosť dodávky a montáže kdekoľvek. Pri výkone
               práce dodržiavame najnovšie stavebné procesy.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <RollLink href="/referencie">Projekty</RollLink>
-              <RollLink href="/produkty-sluzby/tvrde-krytiny" variant="secondary">
+            <div className="grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:gap-4">
+              <RollLink href="/referencie" className="w-full sm:w-auto">Projekty</RollLink>
+              <RollLink href="/produkty-sluzby/tvrde-krytiny" variant="secondary" className="w-full sm:w-auto">
                 Naše služby
               </RollLink>
             </div>
           </div>
 
           <div className="lg:pl-8">
-            <div className="grid grid-cols-2 gap-6 mb-6 text-white">
+            <div className="grid grid-cols-2 gap-6 mb-8 text-white">
               <div>
-                <div className="text-4xl lg:text-5xl font-bold">
+                <div className="text-3xl sm:text-4xl lg:text-5xl font-bold">
                   2500<span className="text-brand">+</span>
                 </div>
-                <div className="text-sm text-white/70 mt-1">
+                <div className="text-xs sm:text-sm text-white/70 mt-1">
                   realizovaných konštrukcií
                 </div>
               </div>
               <div>
-                <div className="text-4xl lg:text-5xl font-bold">
+                <div className="text-3xl sm:text-4xl lg:text-5xl font-bold">
                   19<span className="text-brand">+</span>
                 </div>
-                <div className="text-sm text-white/70 mt-1">
+                <div className="text-xs sm:text-sm text-white/70 mt-1">
                   rokov skúseností
                 </div>
               </div>
             </div>
 
-            <div className="bg-white/15 backdrop-blur-md rounded-lg p-6 relative min-h-[180px]">
+            <div className="bg-white/15 backdrop-blur-md rounded-lg p-6 relative min-h-[180px] hidden lg:block">
               {testimonials.map((t, i) => (
                 <div
                   key={t.name}

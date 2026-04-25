@@ -118,44 +118,42 @@ export default function Home() {
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
               {galleryImages.map((name, i) => (
-                <FadeIn key={name} delay={i * 40}>
-                  <a
-                    href="/referencie"
-                    className="group relative aspect-square overflow-hidden bg-ink block"
-                  >
-                    <Image
-                      src={`/sources/${name}.jpg`}
-                      alt="Realizácia"
-                      fill
-                      sizes="(max-width: 768px) 50vw, 25vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-110 group-hover:opacity-80"
-                    />
-                  </a>
-                </FadeIn>
-              ))}
-              <FadeIn delay={galleryImages.length * 40}>
                 <a
+                  key={name}
                   href="/referencie"
-                  className="aspect-square bg-brand text-white flex flex-col items-center justify-center font-semibold uppercase tracking-wider text-sm hover:bg-brand-dark transition-colors gap-3"
+                  className="group relative aspect-square overflow-hidden bg-ink block"
                 >
-                  Všetky projekty
-                  <svg
-                    width="28"
-                    height="28"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    aria-hidden
-                  >
-                    <path
-                      d="M7 17L17 7M17 7H7M17 7V17"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                  <Image
+                    src={`/sources/${name}.jpg`}
+                    alt="Realizácia"
+                    fill
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    priority={i < 4}
+                    className="object-cover transition-transform duration-500 group-hover:scale-110 group-hover:opacity-80"
+                  />
                 </a>
-              </FadeIn>
+              ))}
+              <a
+                href="/referencie"
+                className="aspect-square bg-brand text-white flex flex-col items-center justify-center font-semibold uppercase tracking-wider text-sm hover:bg-brand-dark transition-colors gap-3"
+              >
+                Všetky projekty
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden
+                >
+                  <path
+                    d="M7 17L17 7M17 7H7M17 7V17"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
             </div>
           </div>
         </section>

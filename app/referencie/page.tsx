@@ -29,7 +29,7 @@ export default function Page() {
 
       <section className="py-20 lg:py-28 bg-paper">
         <div className="max-w-[90vw] mx-auto px-5 lg:px-8">
-          <FadeIn className="text-center max-w-2xl mx-auto mb-14">
+          <div className="text-center max-w-2xl mx-auto mb-14">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Naše realizované projekty
             </h2>
@@ -37,11 +37,9 @@ export default function Page() {
               Prezrite si galériu strešných krytín a pokrývačských prác, ktoré
               sme realizovali pre našich klientov.
             </p>
-          </FadeIn>
+          </div>
 
-          <FadeIn>
-            <Gallery images={images} />
-          </FadeIn>
+          <Gallery images={images} />
         </div>
       </section>
     </>

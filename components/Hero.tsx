@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
+import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
 import { testimonials } from "@/lib/site";
 import { RollLink } from "./RollButton";
 
@@ -10,6 +11,26 @@ const heroImages = [
   "/sources/img_1015.jpg",
   "/sources/img_1020.jpg",
 ];
+
+function Counter({ value, delay = 0 }: { value: number; delay?: number }) {
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => Math.round(latest));
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      const animation = animate(count, value, {
+        duration: 2,
+        ease: "easeOut",
+        delay: delay,
+      });
+      return animation.stop;
+    }
+  }, [value, count, isInView, delay]);
+
+  return <motion.span ref={ref}>{rounded}</motion.span>;
+}
 
 export function Hero() {
   const [imgIdx, setImgIdx] = useState(0);
@@ -29,6 +50,12 @@ export function Hero() {
       clearInterval(b);
     };
   }, []);
+
+  const fadeInUp = {
+    initial: { opacity: 0, y: 30 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
+  };
 
   return (
     <section className="relative h-screen min-h-[700px] w-full">
@@ -57,45 +84,71 @@ export function Hero() {
 
       <div className="relative z-10 h-full w-[90vw] lg:max-w-[90vw] mx-auto flex flex-col justify-end pb-16 pt-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
-          <div className="text-white">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+          <motion.div 
+            className="text-white"
+            initial="initial"
+            animate="animate"
+            variants={{
+              animate: { transition: { staggerChildren: 0.1 } }
+            }}
+          >
+            <motion.h1 
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
+              variants={fadeInUp}
+            >
               KSK Trading s.r.o.
-            </h1>
-            <p className="text-base lg:text-lg text-white/85 max-w-xl leading-relaxed mb-8">
+            </motion.h1>
+            <motion.p 
+              className="text-base lg:text-lg text-white/85 max-w-xl leading-relaxed mb-8"
+              variants={fadeInUp}
+            >
               Zaoberáme sa predajom a kompletnou realizáciou strešných krytín
               vrátane doplnkov a príslušenstva. Odborné poradenstvo od
               profesionálov. Možnosť dodávky a montáže kdekoľvek. Pri výkone
               práce dodržiavame najnovšie stavebné procesy.
-            </p>
-            <div className="grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:gap-4">
+            </motion.p>
+            <motion.div 
+              className="grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:gap-4"
+              variants={fadeInUp}
+            >
               <RollLink href="/referencie" className="w-full sm:w-auto">Projekty</RollLink>
               <RollLink href="/produkty-sluzby/tvrde-krytiny" variant="secondary" className="w-full sm:w-auto">
                 Naše služby
               </RollLink>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          <div className="lg:pl-8">
+          <motion.div 
+            className="lg:pl-8"
+            initial="initial"
+            animate="animate"
+            variants={{
+              animate: { transition: { staggerChildren: 0.1, delayChildren: 0.4 } }
+            }}
+          >
             <div className="grid grid-cols-2 gap-6 mb-8 text-white">
-              <div>
+              <motion.div variants={fadeInUp}>
                 <div className="text-3xl sm:text-4xl lg:text-5xl font-bold">
-                  2500<span className="text-brand">+</span>
+                  <Counter value={2500} delay={0.6} /><span className="text-brand">+</span>
                 </div>
                 <div className="text-xs sm:text-sm text-white/70 mt-1">
                   realizovaných konštrukcií
                 </div>
-              </div>
-              <div>
+              </motion.div>
+              <motion.div variants={fadeInUp}>
                 <div className="text-3xl sm:text-4xl lg:text-5xl font-bold">
-                  19<span className="text-brand">+</span>
+                  <Counter value={19} delay={0.8} /><span className="text-brand">+</span>
                 </div>
                 <div className="text-xs sm:text-sm text-white/70 mt-1">
                   rokov skúseností
                 </div>
-              </div>
+              </motion.div>
             </div>
 
-            <div className="bg-white/15 backdrop-blur-md rounded-lg p-6 relative min-h-[180px] hidden lg:block">
+            <motion.div 
+              className="bg-white/15 backdrop-blur-md rounded-lg p-6 relative min-h-[180px] hidden lg:block"
+              variants={fadeInUp}
+            >
               {testimonials.map((t, i) => (
                 <div
                   key={t.name}
@@ -118,10 +171,11 @@ export function Hero() {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>
   );
 }
+

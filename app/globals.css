@@ -1,26 +1,73 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brand: #f5821e;
+  --color-brand-dark: #d96f10;
+  --color-navy: #1a3d5f;
+  --color-ink: #0a0a0a;
+  --color-paper: #ffffff;
+  --color-stone: #f4f4f4;
+  --font-sans: var(--font-montserrat), Montserrat, system-ui, sans-serif;
+}
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0a0a0a;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.hero-bg-image {
+  opacity: 0;
+  transition: opacity 1.6s ease-in-out;
+}
+.hero-bg-image.active {
+  opacity: 1;
+}
+
+.t-slide {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease;
+  position: absolute;
+  inset: 0;
+}
+.t-slide.active {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+}
+
+.section-title {
+  position: relative;
+  font-weight: 700;
+  color: white;
+  -webkit-text-stroke: 2px var(--color-ink);
+  display: inline-block;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.section-title::before {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  width: 0;
+  overflow: hidden;
+  color: var(--color-brand);
+  -webkit-text-stroke: 0;
+  transition: width 1.2s cubic-bezier(0.65, 0, 0.35, 1);
+  white-space: nowrap;
+}
+.section-title.fill::before {
+  width: 100%;
 }

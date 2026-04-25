@@ -1,0 +1,27 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+  functions = "netlify/functions"
+
+# When deploying Next.js to Netlify, the @netlify/plugin-nextjs handles SSR + API routes.
+# This plugin is auto-installed by Netlify when it detects a Next.js project.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Optional fallback: if you prefer to use the standalone Netlify Function for the
+# contact form (e.g. when exporting statically), uncomment the redirect below to
+# route /api/contact to the Netlify Function.
+#
+[[redirects]]
+  from = "/api/contact"
+  to = "/.netlify/functions/contact"
+  status = 200
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"

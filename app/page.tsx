@@ -1,65 +1,204 @@
 import Image from "next/image";
+import { Hero } from "@/components/Hero";
+import { SectionTitle } from "@/components/SectionTitle";
+import { Faq } from "@/components/Faq";
+import { FadeIn } from "@/components/FadeIn";
+import { RollLink } from "@/components/RollButton";
+import { FaqSchema } from "@/components/Schema";
+import { partners } from "@/lib/site";
+
+const galleryImages = [
+  "img_1030",
+  "img_1040",
+  "img_1045",
+  "img_1010",
+  "img_1005",
+  "img_1049",
+  "img_1001",
+  "img_1002",
+  "img_1004",
+  "img_1007",
+  "img_1008",
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <>
+      <FaqSchema />
+      <Hero />
+
+      {/* Sections after hero have solid bg so they slide over the fixed parallax hero bg */}
+      <div className="relative z-10 bg-paper">
+        {/* About */}
+        <section id="about" className="py-20 lg:py-28 bg-paper">
+          <div className="max-w-[90vw] mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <FadeIn>
+              <span className="text-brand uppercase tracking-widest text-sm font-medium">
+                — Kto sme
+              </span>
+              <div className="mt-2 mb-8">
+                <SectionTitle>O nás</SectionTitle>
+              </div>
+              <div className="space-y-5 text-ink/80 leading-relaxed">
+                <p>
+                  Zaoberáme sa predajom a kompletnou realizáciou strešných
+                  krytín vrátane doplnkov a príslušenstva. Odborné poradenstvo
+                  od profesionálov. Možnosť dodávky a montáže kdekoľvek. Pri
+                  výkone práce dodržiavame najnovšie stavebné procesy.
+                </p>
+                <div className="flex gap-4 items-start bg-stone p-5 border-l-4 border-brand">
+                  <Image
+                    src="/cech-strecharov-slovenska.png"
+                    alt="Čech strechárov Slovenska"
+                    width={80}
+                    height={80}
+                    className="w-20 h-auto object-contain shrink-0"
+                  />
+                  <p className="text-sm">
+                    <strong>Člen Cechu strechárov Slovenska</strong> –
+                    strechárska firma so sídlom v meste Humenné so zárukou
+                    odbornosti a kvality vykonaných prác na streche.
+                  </p>
+                </div>
+                <p>
+                  Strechy na kľúč, poradenstvo, predaj, projekcia a realizácia.{" "}
+                  <strong>
+                    Kvalita a spokojnosť zákazníkov sú pre nás prvoradé
+                  </strong>{" "}
+                  – každý projekt realizujeme s maximálnou starostlivosťou.
+                </p>
+              </div>
+              <div className="mt-8">
+                <RollLink href="/kontakt" variant="dark">
+                  Kontaktovať nás
+                </RollLink>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={120}>
+              <div className="relative aspect-[16/10] overflow-hidden rounded-2xl shadow-2xl group">
+                <Image
+                  src="/sources/img_1033.jpg"
+                  alt="KSK Trading strešné krýtiny"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                
+                {/* Stats Overlay */}
+                <div className="absolute top-4 right-4 lg:top-8 lg:right-8 flex flex-col gap-3 z-20">
+                  <div className="bg-ink/90 backdrop-blur-md p-4 lg:p-5 min-w-[140px] lg:min-w-[160px] border-r-4 border-brand shadow-2xl">
+                    <div className="text-2xl lg:text-3xl font-bold text-brand">
+                      2500+
+                    </div>
+                    <div className="text-[10px] lg:text-xs uppercase tracking-widest text-white/60 mt-1">
+                      realizácií
+                    </div>
+                  </div>
+                  <div className="bg-brand p-4 lg:p-5 min-w-[140px] lg:min-w-[160px] shadow-2xl">
+                    <div className="text-2xl lg:text-3xl font-bold text-white">
+                      19+
+                    </div>
+                    <div className="text-[10px] lg:text-xs uppercase tracking-widest text-white/90 mt-1">
+                      rokov skúseností
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+        </section>
+
+        {/* Gallery */}
+        <section id="gallery" className="py-20 lg:py-28 bg-stone">
+          <div className="max-w-[90vw] mx-auto px-5 lg:px-8">
+            <FadeIn className="mb-12 text-center">
+              <SectionTitle>Galéria</SectionTitle>
+            </FadeIn>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+              {galleryImages.map((name, i) => (
+                <FadeIn key={name} delay={i * 40}>
+                  <a
+                    href="/referencie"
+                    className="group relative aspect-square overflow-hidden bg-ink block"
+                  >
+                    <Image
+                      src={`/sources/${name}.jpg`}
+                      alt="Realizácia"
+                      fill
+                      sizes="(max-width: 768px) 50vw, 25vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-110 group-hover:opacity-80"
+                    />
+                  </a>
+                </FadeIn>
+              ))}
+              <FadeIn delay={galleryImages.length * 40}>
+                <a
+                  href="/referencie"
+                  className="aspect-square bg-brand text-white flex flex-col items-center justify-center font-semibold uppercase tracking-wider text-sm hover:bg-brand-dark transition-colors gap-3"
+                >
+                  Všetky projekty
+                  <svg
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden
+                  >
+                    <path
+                      d="M7 17L17 7M17 7H7M17 7V17"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </a>
+              </FadeIn>
+            </div>
+          </div>
+        </section>
+
+        {/* Partners */}
+        <section id="partners" className="py-20 lg:py-28 bg-paper">
+          <div className="max-w-[90vw] mx-auto px-5 lg:px-8">
+            <FadeIn className="mb-12 text-center">
+              <SectionTitle>Partneri</SectionTitle>
+            </FadeIn>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-12">
+              {Object.values(partners).map((cat, idx) => (
+                <FadeIn key={cat.title} delay={idx * 80}>
+                  <div className="h-full">
+                    <h3 className="text-2xl font-bold mb-6 text-ink">
+                      {cat.title}
+                    </h3>
+                    <div className="flex flex-wrap gap-3">
+                      {cat.logos.map((l) => (
+                        <div
+                          key={l.src}
+                          className="bg-white p-2 border border-ink/5 flex items-center justify-center h-16 w-28 hover:border-brand hover:shadow-lg transition-all duration-300"
+                        >
+                          <Image
+                            src={`/partneri/${cat.folder}/${l.src}`}
+                            alt={l.alt}
+                            width={100}
+                            height={50}
+                            className="max-h-full max-w-full object-contain"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </FadeIn>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <Faq />
+      </div>
+    </>
   );
 }

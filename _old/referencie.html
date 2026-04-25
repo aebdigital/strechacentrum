@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Referencie - Realizované strešné projekty a pokrývačstvo | KSK Trading s.r.o.</title>
+    <meta name="description" content="Galéria realizovaných projektov strešných krytín, pokrývačských prác a odkvapových systémov. Prezrite si našu prácu v Humennom a okolí.">
+    <meta name="keywords" content="galéria projektov, realizované strechy, strešné krytiny, pokrývačstvo, fotogaléria, referenčné projekty, Humenné">
+    <meta name="author" content="KSK Trading s.r.o.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://strechacentrum.sk/referencie">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://strechacentrum.sk/referencie">
+    <meta property="og:title" content="Galéria projektov - Realizované drevené konštrukcie | Eurohause s.r.o.">
+    <meta property="og:description" content="Galéria realizovaných projektov drevených konštrukcií, väzníkov MITEK, drevostavieb a klampiarskych prác.">
+    <meta property="og:image" content="https://strechacentrum.sk/sources/Navrh/navrh.png">
+    
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css?v=20250920">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data - ImageGallery -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ImageGallery",
+        "name": "Galéria projektov Eurohause s.r.o.",
+        "description": "Galéria realizovaných projektov drevených konštrukcií, väzníkov MITEK, drevostavieb a klampiarskych prác.",
+        "creator": {
+            "@type": "Organization",
+            "name": "Eurohause s.r.o."
+        },
+        "associatedMedia": [
+            {
+                "@type": "ImageObject",
+                "contentUrl": "https://strechacentrum.sk/sources/Navrh/navrh.png",
+                "description": "Návrh drevených konštrukcií"
+            },
+            {
+                "@type": "ImageObject", 
+                "contentUrl": "https://strechacentrum.sk/sources/Vyroba/KVH1.jpg",
+                "description": "Výroba KVH profilov"
+            },
+            {
+                "@type": "ImageObject",
+                "contentUrl": "https://strechacentrum.sk/sources/montaz_preprava/IMG-20190228-WA0017-2.jpg",
+                "description": "Montáž drevených konštrukcií"
+            }
+        ]
+    }
+    </script>
+    <style>
+        .logo-image {
+            height: 70px;
+            width: auto;
+            object-fit: contain;
+        }
+    </style>
+    <style>
+        .hero-portfolio {
+            padding: 120px 0 80px;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('sources/new photo/IMG-20250801-WA0005.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            text-align: center;
+        }
+        
+        /* Portfolio page uses global navbar styles */
+        
+        .hero-portfolio h1 {
+            font-size: 7.5rem;
+            font-weight: 700;
+            color: white;
+            -webkit-text-stroke: 2px #000;
+            text-stroke: 2px #000;
+            margin-bottom: 1rem;
+            text-align: left;
+            margin-left: 80px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+            position: relative;
+            overflow: hidden;
+            line-height: 1.0;
+        }
+        
+        .hero-portfolio h1::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            color: white;
+            -webkit-text-stroke: 0;
+            text-stroke: 0;
+            overflow: hidden;
+            transition: width 1s ease;
+            white-space: nowrap;
+        }
+        
+        .hero-portfolio h1.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .hero-portfolio h1.fill-animate::before {
+            width: 100%;
+        }
+        
+        /* Lightbox Improvements */
+        .lightbox-nav {
+            position: fixed !important;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+            background: rgba(0, 0, 0, 0.6) !important;
+            border: 2px solid rgba(255, 255, 255, 0.3) !important;
+            color: white !important;
+            font-size: 24px !important;
+            cursor: pointer !important;
+            width: 60px !important;
+            height: 60px !important;
+            border-radius: 50% !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            z-index: 10002 !important;
+            transition: all 0.3s ease !important;
+        }
+        
+        .lightbox-nav:hover {
+            background: rgba(0, 0, 0, 0.8) !important;
+            border: 2px solid rgba(255, 255, 255, 0.6) !important;
+            transform: translateY(-50%) scale(1.1) !important;
+        }
+        
+        .lightbox-prev {
+            left: 20px !important;
+        }
+        
+        .lightbox-next {
+            right: 20px !important;
+        }
+        
+        .lightbox-image {
+            cursor: pointer !important;
+        }
+
+        /* Mobile fixes for title animation */
+        @media (max-width: 768px) {
+            .hero-portfolio h1::before {
+                white-space: normal !important;
+                word-wrap: break-word;
+            }
+            
+            .hero-portfolio h1 {
+                font-size: 4rem;
+                margin-left: 20px;
+            }
+            
+            .lightbox-nav {
+                width: 50px !important;
+                height: 50px !important;
+                font-size: 20px !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-portfolio h1::before {
+                white-space: normal !important;
+                word-wrap: break-word;
+            }
+            
+            .hero-portfolio h1 {
+                font-size: 3rem;
+                margin-left: 15px;
+            }
+        }
+        
+        .hero-portfolio p {
+            font-size: 1.2rem;
+            color: white;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .portfolio-filters {
+            padding: 40px 0;
+            background: white;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            padding: 20px 0;
+        }
+        
+        .filter-btn {
+            background: transparent;
+            border: 2px solid #333;
+            color: #333;
+            padding: 10px 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 0;
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .filter-btn:hover {
+            background: #265286;
+            border-color: #265286;
+            color: white;
+        }
+        
+        .filter-btn.active {
+            background: #265286;
+            border-color: #265286;
+            color: white;
+            position: relative;
+        }
+        
+        /* Shining border effect for active button */
+        .filter-btn.active::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.8), 
+                transparent, 
+                transparent, 
+                transparent, 
+                rgba(255, 255, 255, 0.8), 
+                transparent
+            );
+            background-size: 400% 400%;
+            animation: shine 3s ease-in-out infinite;
+            z-index: -1;
+        }
+        
+        @keyframes shine {
+            0% {
+                background-position: 0% 0%;
+            }
+            25% {
+                background-position: 100% 0%;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+            75% {
+                background-position: 0% 100%;
+            }
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+            margin-top: 40px;
+            align-items: stretch;
+            padding: 0 5px;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+        }
+        
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: scale(1);
+            visibility: hidden;
+            aspect-ratio: 16/10;
+        }
+        
+        .portfolio-item.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .portfolio-item.hidden {
+            opacity: 0 !important;
+            transform: scale(0.8) translateY(-20px) !important;
+            pointer-events: none;
+            position: absolute !important;
+            left: -9999px !important;
+            top: -9999px !important;
+            visibility: hidden !important;
+            display: none !important;
+        }
+        
+        .portfolio-item.filtering {
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+        }
+        
+        .portfolio-title {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .portfolio-year {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
+            font-weight: 400;
+        }
+        
+        .portfolio-badge {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .portfolio-year-badge {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        /* Tablet view - 2 columns */
+        @media (max-width: 1000px) and (min-width: 769px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 5px;
+                padding: 0 5px;
+            }
+        }
+        
+        /* Mobile view - 1 column */
+        @media (max-width: 768px) {
+            .filter-buttons {
+                flex-direction: row;
+                justify-content: center;
+                gap: 8px;
+                flex-wrap: wrap;
+            }
+            
+            .filter-btn {
+                padding: 8px 12px;
+                font-size: 0.75rem;
+                text-align: center;
+                flex: 0 0 auto;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                gap: 5px;
+                padding: 0 5px;
+            }
+            
+            .portfolio-item {
+                min-height: auto;
+            }
+            
+            .hero-portfolio h1 {
+                font-size: 4.5rem;
+                margin-left: 20px;
+            }
+        }
+        
+        /* Lightbox Styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(5px);
+        }
+        
+        .lightbox.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            animation: lightboxZoom 0.3s ease;
+        }
+        
+        @keyframes lightboxZoom {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .lightbox-image {
+            width: 100%;
+            height: auto;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 0;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+        }
+        
+        .lightbox-close {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            z-index: 10001;
+        }
+        
+        .lightbox-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+        
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .lightbox-nav:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .lightbox-prev {
+            left: -70px;
+        }
+        
+        .lightbox-next {
+            right: -70px;
+        }
+        
+        .lightbox-info {
+            position: absolute;
+            bottom: -60px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .lightbox-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .lightbox-description {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .lightbox-nav {
+                display: none;
+            }
+            
+            .lightbox-close {
+                top: 20px;
+                right: 20px;
+            }
+            
+            .lightbox-info {
+                position: relative;
+                bottom: 0;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Container -->
+    <div id="navigation-container"></div>
+    
+    
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="contact-hero-bg">
+            <img src="sources/img_1025.jpg" alt="Galéria pozadie">
+        </div>
+        <div class="contact-hero-content">
+            <div class="container">
+                <h1 class="contact-hero-title">Referencie</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="portfolio-filters">
+            <div class="portfolio-grid">
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1001.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1002.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1003.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1004.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+               
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1005.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1006.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1007.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1008.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1009.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1010.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1011.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1012.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1013.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1014.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1015.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1016.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1017.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1018.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1019.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1020.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1021.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1022.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1023.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1024.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1025.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+               
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1026.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1027.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1028.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1029.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+               
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1030.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1031.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1032.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1033.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+            
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1034.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1035.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1036.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1037.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+            
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1038.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1039.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1040.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1041.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1042.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1043.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1044.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1045.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1046.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1047.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1048.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                
+                <div class="portfolio-item visible">
+                    <img src="sources/img_1049.jpg" alt="KSK Trading realizácie" onclick="openLightbox(this)">
+                </div>
+                
+            
+                
+                
+                
+            </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title" data-text="Často kladené otázky">Často kladené otázky</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Je čas na rekonštrukciu resp. novú strechu?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>V prípade poškodenie vodou na vnútorných stenách je nutné opraviť netesnosti. Ak máte určité viditeľné problémy typu poškodená krytina, znehodnotené oplechovanie je vhodné uvažovať nad výmenou starej strechy za novú.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Môžem si dovoliť rekonštrukciu strechy?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Po vykonaní obhliadky Vám vystavíme najvhodnejšiu ponuku. Náklady na rekonštrukciu sú individuálne.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>V ktorom mesiaci je vhodné pracovať na oprave strechy?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Väčšina projektov sa realizuje v letnom období. V prípade dostupnosti strechy je možné realizovať stavby aj v inom období. Ak máte určený termín, ktorý Vám vyhovuje, vieme nájsť spoločne riešenie.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Aké záruky dávate na strešné systémy?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Na každý produkt poskytujeme minimálne 15 ročnú záruku. V prípade strechy poskytujeme kompletnú záruku na všetky komponenty a práce.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item faq-new">
+                    <div class="faq-question">
+                        <h3>Koľko trvá realizácia novej strechy?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Doba realizácie závisí od veľkosti a zložitosti projektu. Bežne trvá realizácia 3-10 pracovných dní v závislosti od počasia a rozsahu prác.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item faq-new">
+                    <div class="faq-question">
+                        <h3>Poskytujete bezplatné konzultácie a cenové ponuky?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Áno, poskytujeme bezplatné konzultácie a vypracovanie cenových ponúk. Naši odborníci radi navštívia vašu nehnuteľnosť a poskytnú profesionálne poradenstvo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+            <button class="lightbox-nav lightbox-prev" onclick="previousImage()">&#8249;</button>
+            <img id="lightbox-image" class="lightbox-image" src="" alt="">
+            <button class="lightbox-nav lightbox-next" onclick="nextImage()">&#8250;</button>
+        </div>
+    </div>
+
+    <script src="script.js?v=20250920"></script>
+    <script>
+        // Simple gallery with hero title animation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate portfolio h1 on page load
+            const portfolioH1 = document.querySelector('.hero-portfolio h1');
+            if (portfolioH1) {
+                setTimeout(() => {
+                    portfolioH1.classList.add('animate');
+                }, 100);
+                
+                setTimeout(() => {
+                    portfolioH1.classList.add('fill-animate');
+                }, 800);
+            }
+        });
+        
+        // Lightbox functionality
+        let currentImageIndex = 0;
+        let currentImages = [];
+        
+        function openLightbox(imgElement) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            
+            // Get all visible images from current filter
+            const visibleItems = document.querySelectorAll('.portfolio-item.visible img');
+            currentImages = Array.from(visibleItems);
+            currentImageIndex = currentImages.indexOf(imgElement);
+            
+            // Set lightbox content
+            lightboxImage.src = imgElement.src;
+            lightboxImage.alt = imgElement.alt;
+            
+            // Show lightbox
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // Add click event to image for next slide
+            lightboxImage.onclick = function() {
+                nextImage();
+            };
+        }
+        
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        
+        function nextImage() {
+            if (currentImageIndex < currentImages.length - 1) {
+                currentImageIndex++;
+            } else {
+                currentImageIndex = 0; // Wrap to first image
+            }
+            updateLightboxImage();
+        }
+        
+        function previousImage() {
+            if (currentImageIndex > 0) {
+                currentImageIndex--;
+            } else {
+                currentImageIndex = currentImages.length - 1; // Wrap to last image
+            }
+            updateLightboxImage();
+        }
+        
+        function updateLightboxImage() {
+            const lightboxImage = document.getElementById('lightbox-image');
+            
+            const currentImg = currentImages[currentImageIndex];
+            lightboxImage.src = currentImg.src;
+            lightboxImage.alt = currentImg.alt;
+            
+            // Add click event to image for next slide
+            lightboxImage.onclick = function() {
+                nextImage();
+            };
+        }
+        
+        // Close lightbox on ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            } else if (e.key === 'ArrowRight') {
+                nextImage();
+            } else if (e.key === 'ArrowLeft') {
+                previousImage();
+            }
+        });
+        
+        // Close lightbox on background click
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html> 

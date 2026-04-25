@@ -1,0 +1,41 @@
+User-agent: *
+Allow: /
+
+# Important pages
+Allow: /index.html
+Allow: /kontakt.html
+Allow: /produkty-a-sluzby.html
+Allow: /strechy-na-mieru.html
+Allow: /referencie.html
+
+# Static assets
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /sources/
+Allow: *.css
+Allow: *.js
+Allow: *.png
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.gif
+Allow: *.svg
+Allow: *.ico
+Allow: *.woff
+Allow: *.woff2
+Allow: *.ttf
+
+# Block sensitive files
+Disallow: /send_email.php
+Disallow: *.php
+Disallow: /admin/
+Disallow: /tmp/
+Disallow: /logs/
+Disallow: /.htaccess
+Disallow: /.env
+
+# Sitemap location
+Sitemap: https://strechacentrum.sk/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1

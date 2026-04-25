@@ -51,23 +51,9 @@ body {
 .section-title {
   position: relative;
   font-weight: 700;
-  color: white;
+  color: var(--color-brand);
   -webkit-text-stroke: 2px var(--color-ink);
   display: inline-block;
   line-height: 1.1;
   letter-spacing: -0.02em;
-}
-.section-title::before {
-  content: attr(data-text);
-  position: absolute;
-  inset: 0;
-  width: 0;
-  overflow: hidden;
-  color: var(--color-brand);
-  -webkit-text-stroke: 0;
-  transition: width 1.2s cubic-bezier(0.65, 0, 0.35, 1);
-  white-space: nowrap;
-}
-.section-title.fill::before {
-  width: 100%;
 }

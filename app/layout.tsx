@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s | KSK Trading s.r.o.",
   },
   description:
-    "KSK Trading s.r.o. – profesionálna realizácia strešných krytín, predaj a montáž. Člen Cechu strechárov Slovenska. Možnosť dodávky a montáže kdekoľvek.",
+    "KSK Trading s.r.o. – profesionálna realizácia strešných krytín, predaj a montáž. Možnosť dodávky a montáže kdekoľvek.",
   applicationName: "KSK Trading s.r.o.",
   keywords: [
     "strechy na kľúč",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     siteName: "KSK Trading s.r.o.",
     title: "Profesionálne strechy pre každého. KSK Trading s.r.o.",
     description:
-      "Profesionálna realizácia strešných krytín. Člen Cechu strechárov Slovenska. Humenné a celé Slovensko.",
+      "Profesionálna realizácia strešných krytín. Humenné a celé Slovensko.",
     images: [
       { url: "/logo.png", width: 1200, height: 630, alt: "KSK Trading s.r.o." },
     ],

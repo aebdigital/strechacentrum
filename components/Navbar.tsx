@@ -48,13 +48,6 @@ export function Navbar() {
             className="h-12 w-auto object-contain"
             priority
           />
-          <Image
-            src="/cech-strecharov-slovenska.png"
-            alt="Čech strechárov Slovenska"
-            width={56}
-            height={56}
-            className="h-10 w-auto object-contain hidden sm:block"
-          />
         </Link>
 
         <ul className="hidden lg:flex items-center gap-8 text-white text-sm font-medium tracking-wide uppercase">

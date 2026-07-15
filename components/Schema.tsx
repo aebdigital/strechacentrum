@@ -9,7 +9,7 @@ export function LocalBusinessSchema() {
     "@id": `${BASE}/#organization`,
     name: site.company,
     description:
-      "Profesionálna realizácia strešných krytín vrátane doplnkov a príslušenstva. Odborné poradenstvo od profesionálov. Člen Cechu strechárov Slovenska.",
+      "Profesionálna realizácia strešných krytín vrátane doplnkov a príslušenstva. Odborné poradenstvo od profesionálov.",
     url: BASE,
     logo: `${BASE}/logo.png`,
     image: `${BASE}/logo.png`,

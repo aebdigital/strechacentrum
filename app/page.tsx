@@ -46,20 +46,6 @@ export default function Home() {
                   od profesionálov. Možnosť dodávky a montáže kdekoľvek. Pri
                   výkone práce dodržiavame najnovšie stavebné procesy.
                 </p>
-                <div className="flex gap-4 items-start bg-stone p-5 border-l-4 border-brand">
-                  <Image
-                    src="/cech-strecharov-slovenska.png"
-                    alt="Čech strechárov Slovenska"
-                    width={80}
-                    height={80}
-                    className="w-20 h-auto object-contain shrink-0"
-                  />
-                  <p className="text-sm">
-                    <strong>Člen Cechu strechárov Slovenska</strong> –
-                    strechárska firma so sídlom v meste Humenné so zárukou
-                    odbornosti a kvality vykonaných prác na streche.
-                  </p>
-                </div>
                 <p>
                   Strechy na kľúč, poradenstvo, predaj, projekcia a realizácia.{" "}
                   <strong>
